@@ -11,9 +11,18 @@ exports.get = (req, res) => {
    }
    res.json(livros);
 };
+
+exports.getById = (req, res) => {
+   const { id } = req.params;
+   res.json(
+      livros.filter(livro => livro.id == id)
+   );
+};
+
 exports.teste = (req, res) => {
-	const Id = req.params.id;
-	
-	//res.redirect('/forgetPassword');
-	res.send('hello, world!'+ Id);
+	//const id = req.params.id;
+	const { id } = req.params;
+	res.redirect('/livro');
+	//res.redirect('/livro', { id });
+	//res.send('hello, world!'+ Id);
 }

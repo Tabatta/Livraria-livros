@@ -9,7 +9,6 @@ function mostrarLivros(livros){
 	
 	livros.shuffle();
 	
-	galeriaLivros.textContent= "teste"
 	for(let i= 0; i < livros.length; i++){
 		const linkLivro = document.createElement("a");
 		const imgLivro = document.createElement("img")
