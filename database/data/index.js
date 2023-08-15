@@ -1,14 +1,14 @@
-const produtos = require("./produtos.json")
-const Produto = require("../../models/Produto")
+const livros = require("./livros.json")
+const Livro = require("../../models/Livro")
 
-const carregarProdutos = (()=>{
-	const lista = []
-	for(i in produtos){
-		lista.push(new Produto(produtos[i]))
+const carregarLivros = (()=>{
+	const lista = [];
+	for(i in livros){
+		lista.push(new Livro(livros[i]))
 	}
-	return lista
-})
+	return lista;
+})()
 
 module.exports = {
-	carregarProdutos
+	carregarLivros
 }
